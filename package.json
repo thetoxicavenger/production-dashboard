@@ -1,5 +1,5 @@
 {
-  "name": "push-2-deploy",
+  "name": "jessicamiriamphotography",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://safeuser@162.243.156.153/home/safeuser/app.git"
+    "url": "ssh://safeuser@45.55.21.179/home/safeuser/app.git"
   },
-  "author": "",
+  "author": "Mitchell Cravens",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^3.3.6",
+    "compression": "^1.6.2",
+    "express": "^4.13.4",
     "express-handlebars": "^3.0.0",
-    "forever": "^0.15.2",
-    "jade": "^1.11.0",
-    "path": "^0.12.7"
+    "jquery": "^2.2.4"
   }
 }
