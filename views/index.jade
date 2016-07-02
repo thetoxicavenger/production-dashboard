@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  if (!user)
+    a(href="/login") Login
+  if (user)
+    div(class="header")
+      span(class="page-title") Production Dashboard
+      a(href="/logout") Logout
+    div(class="do-api-resp")
+      ul
+        each val in dropletsInfo
+          li(class="each-droplet")
+            div(class="droplet-info")
+              a(href=val.ip, target="_blank")= val.name
+              
+            

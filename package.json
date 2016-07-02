@@ -1,22 +1,32 @@
 {
-  "name": "jessicamiriamphotography",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "production-dashboard",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://safeuser@45.55.21.179/home/safeuser/app.git"
+    "url": "git@github.com:epic-math/NodeJS-MEAN.git"
   },
-  "author": "Mitchell Cravens",
-  "license": "ISC",
+  "author": "K Hong <k@epicmath.com>",
+  "license": "MIT",
   "dependencies": {
-    "bootstrap": "^3.3.6",
-    "compression": "^1.6.2",
-    "express": "^4.13.4",
-    "express-handlebars": "^3.0.0",
-    "jquery": "^2.2.4"
+    "body-parser": "^1.13.2",
+    "chai": "~1.8.1",
+    "cookie-parser": "^1.3.5",
+    "debug": "^2.1.1",
+    "do-wrapper": "^3.6.1",
+    "express": "^4.13.1",
+    "express-session": "^1.10.1",
+    "jade": "^1.11.0",
+    "mocha": "~1.14.0",
+    "mongoose": "~4.4",
+    "morgan": "^1.6.1",
+    "passport": "^0.2.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^1.0.0",
+    "serve-favicon": "^2.2.0",
+    "should": "~2.1.0"
   }
 }
