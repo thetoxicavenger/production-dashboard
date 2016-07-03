@@ -17,11 +17,14 @@ router.get('/', function (req, templRes) {
         dropletsJSON = body.droplets;
     for (var i=0; i < dropletsJSON.length; i++) {
       var thisDroplet = dropletsJSON[i];
-      var thisDropletName = thisDroplet.name,
-          thisDropletIp = thisDroplet.networks.v4[0].ip_address;
+      var thisDropletName = thisDroplet.name;
+      var publicAndPrivateIpv4Arr = thisDroplet.networks.v4;
+      var lengthOfAbove = publicAndPrivateIpv4Arr.length,
+          publicIpVal = "";
+      publicIpVal = lengthOfAbove > 1 ? publicAndPrivateIpv4Arr[1].ip_address : publicAndPrivateIpv4Arr[0].ip_address;
       // adjustment to add http protocol part of string, which DigitalOcean API doesn't provide:
-      thisDropletIp = "http://" + thisDropletIp;
-      var thisDropletKeyInfoObj = new Droplet(thisDropletName, thisDropletIp);
+      publicIpVal = "http://" + publicIpVal;
+      var thisDropletKeyInfoObj = new Droplet(thisDropletName, publicIpVal);
       // append to keyDropletsInfoArr:
       keyDropletsInfoArr.push(thisDropletKeyInfoObj);
     }

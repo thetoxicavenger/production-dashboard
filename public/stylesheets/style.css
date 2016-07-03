@@ -7,6 +7,30 @@ a {
 }
 
 /* My Styles */
+.wrapper {
+  text-align: center;
+}
+.production-dashboard-heading {
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Login page */
+
+.login-container {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.login-container a {
+  font-size: 44px;
+}
+.test-application-explanation {
+  max-width: 500px;
+  font-size: 20px;
+  line-height: 25px;
+}
 
 .header {
   height: 50px;
